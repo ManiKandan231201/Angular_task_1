@@ -1,0 +1,19 @@
+.Employee{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+h1{
+  text-align: center;
+  font-size: 1.4vw;
+}
+th{
+  background-color: yellow;
+}
+td{
+  background-color: lime;
+}
+button{
+  width: 100px;
+  height: 30px;
+}

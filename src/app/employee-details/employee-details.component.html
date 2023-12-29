@@ -1,0 +1,42 @@
+<div class="Employee">
+  <div class="Employee-contents">
+    <h1>Employee Details</h1>
+  </div>
+  <div class="Employee-contents">
+    <table border="1">
+      <tr>
+        <th>EMP Id</th>
+        <th>EMP Name</th>
+        <th>Designation</th>
+        <th>Location</th>
+        <th>Address</th>
+        @if(!isShowSalary){
+          <th>Salary</th>
+        }
+      </tr>
+
+      @for(Employee of EmployeeDetails; track EmployeeDetails.EMPId){
+        <tr>
+          <td>{{Employee.EMPId}}</td>
+          <td>{{Employee.EMPName}}</td>
+          <td>{{Employee.Designation}}</td>
+          <td>{{Employee.Location}}</td>
+          <td>{{Employee.Address}}</td>
+
+          @if(!isShowSalary){
+            <td>{{Employee.Salary}}</td>
+          }
+
+        </tr>
+      }
+      <tr>
+        @if(!isShowSalary){
+          <td><button (click)="ShowSalary()">Hide</button></td>
+        }@else{
+          <td><button (click)="ShowSalary()">Show</button></td>
+        }
+
+      </tr>
+    </table>
+  </div>
+</div>
