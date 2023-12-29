@@ -1,0 +1,47 @@
+.hotel{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.2);
+  padding: 20px;
+  width: 450px;
+}
+.hotel-contents{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.hotel-contents:nth-child(6){
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+h1{
+  font-weight: lighter;
+  font-size: 1.5vw;
+}
+label{
+  font-weight: bold;
+  font-size: 1vw;
+}
+select{
+  height: 30px;
+  color: gray;
+  font-size: 1vw;
+  padding-left: 10px;
+}
+
+small{
+  color: red;
+}
+
+button{
+  width: 120px;
+  height: 30px;
+  background-color: rgb(88, 8, 127);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

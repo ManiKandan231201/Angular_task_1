@@ -1,0 +1,42 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.navbar{
+  background-color: rgb(37, 37, 37);
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar-contents{
+  display: flex;
+  gap: 30px;
+  margin-left: 20px;
+}
+.navbar-contents:nth-child(2){
+  margin-right: 20px;
+}
+.navbar-contents:nth-child(2) li{
+  color: white;
+  font-size: 1.2vw;
+}
+.navbar-innercontents{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+a{
+  text-decoration: none;
+  color: gray;
+}
+li{
+  list-style: none;
+}
+.Logo{
+  font-size: 2.2vw;
+  color: white;
+}
+i{
+  margin-right: 10px;
+}

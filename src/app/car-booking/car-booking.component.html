@@ -1,0 +1,72 @@
+<div class="hotel">
+  <div class="hotel-contents">
+    <h1>Car Reservation Form</h1>
+  </div>
+  <form action="" [formGroup]="Hotel">
+
+    <div class="hotel-contents">
+      <label for="">Car Type</label>
+      <select name="" id="" formControlName="CarType" (change)="HotelCost(Hotel.value)">
+        <option value="" selected>Select Car Type</option>
+        <option value="Ac">Ac</option>
+        <option value="Non Ac">Non Ac</option>
+      </select>
+      @if(Hotel.controls['CarType'].errors?.['required'] && Hotel.controls['CarType'].dirty){
+        <small>must be Selected</small>
+      }
+
+    </div>
+    <div class="hotel-contents">
+      <label for="">Number Of Cars</label>
+      <select name="" id="" formControlName="Cars" (change)="HotelCost(Hotel.value)">
+        <option value="" selected>0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+      </select>
+      @if(Hotel.controls['Cars'].errors?.['required'] && Hotel.controls['Cars'].dirty){
+        <small>must be Selected</small>
+      }
+
+    </div>
+    <div class="hotel-contents">
+      <label for="">Number Of Persons</label>
+      <select name="" id="" formControlName="Persons" (change)="HotelCost(Hotel.value)">
+        <option value="" selected>0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+      </select>
+      @if(Hotel.controls['Persons'].errors?.['required'] && Hotel.controls['Persons'].dirty){
+        <small>must be Selected</small>
+      }
+    </div>
+    <div class="hotel-contents">
+      <label for="">Number Of Children</label>
+      <select name="" id="" formControlName="Children" (change)="HotelCost(Hotel.value)">
+        <option value="" selected>0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+      </select>
+      @if(Hotel.controls['Children'].errors?.['required'] && Hotel.controls['Children'].dirty){
+        <small>must be Selected</small>
+      }
+    </div>
+    <div class="hotel-contents">
+      <label for="">Food Facilities</label>
+      <select name="" id="" formControlName="Facilities" (change)="HotelCost(Hotel.value)">
+        <option value="" selected>Do You Want Food Facilities?</option>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
+      @if(Hotel.controls['Facilities'].errors?.['required'] && Hotel.controls['Facilities'].dirty){
+        <small>must be Selected</small>
+      }
+    </div>
+    <div class="hotel-contents">
+      <label for="">Total Cost ($):  </label>
+      <button [disabled]="!Hotel.valid">{{Price}}</button>
+    </div>
+  </form>
+</div>
